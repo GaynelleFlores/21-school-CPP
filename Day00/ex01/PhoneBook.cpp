@@ -7,8 +7,9 @@
 int main()
 {
 	PhoneBook book;
-
 	std::string str;
+
+	std::cout << HELLO << std::endl;
 	while (1)
 	{
 		std::cout << "Please, enter a command ADD, SEARCH or EXIT:";
@@ -19,7 +20,7 @@ int main()
 			book.search();
 		else if (str == "EXIT" || str == "exit")
 		{
-			std::cout << "Goodbye!\n";
+			std::cout << BYE;
 			exit (0);
 		}
 		else

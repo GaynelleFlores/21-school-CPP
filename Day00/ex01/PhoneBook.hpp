@@ -1,6 +1,9 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
+#define HELLO "\033[38;5;069m***AWESOME PHONEBOOK***\033[0m"
+#define BYE "\033[38;5;069mGoodbye!\033[0m\n"
+
 class PhoneBook {
 private:
 	Contact contacts[8];

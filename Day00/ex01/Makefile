@@ -1,6 +1,8 @@
 NAME = myPhoneBook
 
-SRC = PhoneBook.cpp
+SRC =	main.cpp PhoneBook.cpp Contact.cpp
+
+OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
 CC = clang++
 
@@ -9,14 +11,14 @@ HEADERS =	Contact.hpp\
 
 FLAGS = -Wall -Wextra -Werror
 
-$(NAME):	$(SRC) $(HEADERS)
-	$(CC) $(FLAGS) $< -o $@
+$(NAME):	$(OBJ) $(HEADERS)
+	$(CC) $(FLAGS) $(OBJ) -o $@
 
 clean:
 	@rm -f $(NAME)
 
 fclean:
-	@rm -f $(NAME)
+	@rm -f $(OBJ) $(NAME)
 
 re: fclean all
 

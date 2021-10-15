@@ -4,7 +4,7 @@ SRC =	main.cpp\
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
-CC = clang++
+CC = clang++ -std=c++98
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -16,6 +16,8 @@ clean:
 
 fclean:
 	@rm -f $(OBJ) $(NAME)
+
+all: $(NAME)
 
 re: fclean all
 

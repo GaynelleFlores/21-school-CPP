@@ -5,17 +5,12 @@
 #define YELLOW(text) ("[38;2;254;209;12m" text "[0m")
 #define RED(text) ("[38;2;255;12;27m" text "[0m")
 
-Karen::Karen(void)
+Karen::Karen()
 {
 	this->debug_ptr = &Karen::debug;
 	this->info_ptr = &Karen::info;
 	this->warning_ptr = &Karen::warning;
 	this->error_ptr = &Karen::error;
-}
-
-Karen::~Karen(void)
-{
-	std::cout << "Goodbye!\n";
 }
 
 int Karen::returnLevel(std::string level)
@@ -37,39 +32,34 @@ void Karen::complain(std::string level)
 	switch (i) {
 		case 0:
 			(this->*debug_ptr)();
-			break ;
-		case 1:
-			(this->*info_ptr)();
-			break ;
-		case 2:
-			(this->*warning_ptr)();
-			break ;
-		case 3:
-			(this->*error_ptr)();
-			break ;
-		default:
-			std::cout << "Unknown level\n";
-			break ;
+			case 1:
+				(this->*info_ptr)();
+				case 2:
+					(this->*warning_ptr)();
+					case 3:
+						(this->*error_ptr)();
+						break;
+						default:
+							std::cout << "[ Insignificant problem ]\n";
 	}
 }
 
 void Karen::debug( void )
 {
-		std::cout << GREEN("\"Karen\" is a stupid sexist insult.\n");
+		std::cout << GREEN("[ DEBUG ] \"Karen\" is a stupid sexist insult.\n\n");
 }
-
 
 void Karen::info( void )
 {
-		std::cout << GREEN2("Seriously, it's not funny.\n");
+	std::cout << GREEN2("[ INFO ] Seriously, it's not funny.\n\n");
 }
 
 void Karen::warning( void )
 {
-		std::cout << YELLOW("Do you really think that's okay? I got bad news for you.\n");
+	std::cout << YELLOW("[ WARNING ] Do you really think that's okay? I got bad news for you.\n\n");
 }
 
 void Karen::error( void )
 {
-		std::cout << RED("Oh, i don't want to explain it, just leave me alone.\n");
+	std::cout << RED("[ ERROR ] Oh, i don't want to explain it, just leave me alone.\n\n");
 }

@@ -1,9 +1,6 @@
-show your program Make a program called show your program replace that takes a filename and two strings, let’s call them
-s1 and s2, which are NOT empty.
-It will open the show your program file, and write its contents toshow your program FILENAME.replace, after replacing
-every occurrence of s1 with s2.
-All the member show your program functions of the class std::string are allowed, except replace. Use
-them wiselyshow your program!show your program
-Of course, you will handle errors as show your programshow your programbest you can. Do not use the C file manipulation
-functions, because that would be cheating, and cheating’s bad, m’kay?
-You will turn in some test files to show your program works. show your program
+this and is text
+thiands is text and text and file
+this and is text
+and this is text and
+and
+and this is text

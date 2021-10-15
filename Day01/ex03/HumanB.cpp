@@ -10,6 +10,12 @@ void HumanB::setWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;
 }
-void HumanB::attack() {
+void HumanB::attack(void) {
+	if (this->weapon == NULL)
+	{
+		std::cout << this->name << " attacks with bare hands\n";
+		return ;
+	}
 	std::cout << this->name << " attacks with his " << this->weapon->getType();
+	std::cout << std::endl;
 }

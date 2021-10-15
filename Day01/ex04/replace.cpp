@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <cerrno>
+#include <sstream>
+#include <stdio.h>
+#include <sys/errno.h>
 
 void checkArguments(int argc, char **argv)
 {
@@ -9,9 +12,16 @@ void checkArguments(int argc, char **argv)
 		std::cout << "I want to get filename, string1 and string2!\n";
 		exit (0);
 	}
-	if (!argv[2] || argv[2][0] == '\0' || !argv[3] || argv[3][0] == '\0' )
+	std::string s1(argv[2]);
+	std::string s2(argv[3]);
+	if (s1.empty() || s2.empty())
 	{
 		std::cout << "One or two strings are empty, try again.\n";
+		exit (0);
+	}
+	if (s1 == s2)
+	{
+		std::cout << "First and Second strings are identical.\n";
 		exit (0);
 	}
 }
@@ -33,19 +43,22 @@ void checkFile(std::ifstream *read)
 void replacing(std::string del, std::string add, std::string name)
 {
 	std::string str;
+	std::stringstream buffer;
 	std::ifstream read(name);
 	checkFile(&read);
 	name.append(".replase");
 	std::ofstream file(name);
-	while (std::getline(read, str))
+	buffer << read.rdbuf();
+	str = buffer.str();
+	int start = 0;
+	while ((start = str.find(del, start)) >= 0)
 	{
-		int start = 0;
-		while ((start = str.find(del, start)) >= 0)
-		{
-			str.replace(str.find(del, start), del.length(), add);
-		}
-		file << str << "\n";
+		str.erase(start, del.length());
+		str.insert(start, add);
 	}
+	file << str;
+	file.close();
+	read.close();
 }
 
 int main(int argc, char **argv)

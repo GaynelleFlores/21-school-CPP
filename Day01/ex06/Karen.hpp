@@ -16,7 +16,6 @@ public:
 	func_ptr warning_ptr;
 	func_ptr error_ptr;
 	Karen(void);
-	~Karen(void);
 	int returnLevel(std::string level);
 	void complain(std::string level);
 };

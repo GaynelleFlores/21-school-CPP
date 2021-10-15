@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main ()
+int main (void)
 {
 	std::string brain = "HI THIS IS BRAIN";
 	std::string *PTR = &brain;

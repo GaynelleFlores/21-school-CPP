@@ -55,21 +55,21 @@ void Karen::complain(std::string level)
 
 void Karen::debug( void )
 {
-		std::cout << GREEN("\"Karen\" is a stupid sexist insult.\n");
+		std::cout << GREEN("debug\n");
 }
 
 
 void Karen::info( void )
 {
-		std::cout << GREEN2("Seriously, it's not funny.\n");
+		std::cout << GREEN2("info\n");
 }
 
 void Karen::warning( void )
 {
-		std::cout << YELLOW("Do you really think that's okay? I got bad news for you.\n");
+		std::cout << YELLOW("warning\n");
 }
 
 void Karen::error( void )
 {
-		std::cout << RED("Oh, i don't want to explain it, just leave me alone.\n");
+		std::cout << RED("error\n");
 }

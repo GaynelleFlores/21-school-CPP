@@ -32,34 +32,34 @@ void Karen::complain(std::string level)
 	switch (i) {
 		case 0:
 			(this->*debug_ptr)();
-			case 1:
-				(this->*info_ptr)();
-				case 2:
-					(this->*warning_ptr)();
-					case 3:
-						(this->*error_ptr)();
-						break;
-						default:
-							std::cout << "[ Insignificant problem ]\n";
+		case 1:
+			(this->*info_ptr)();
+		case 2:
+			(this->*warning_ptr)();
+		case 3:
+			(this->*error_ptr)();
+			break;
+		default:
+			std::cout << "[ Insignificant problem ]\n";
 	}
 }
 
 void Karen::debug( void )
 {
-		std::cout << GREEN("[ DEBUG ] \"Karen\" is a stupid sexist insult.\n\n");
+		std::cout << GREEN("[ DEBUG ] This is debug!\n\n");
 }
 
 void Karen::info( void )
 {
-	std::cout << GREEN2("[ INFO ] Seriously, it's not funny.\n\n");
+	std::cout << GREEN2("[ INFO ] This is info!\n\n");
 }
 
 void Karen::warning( void )
 {
-	std::cout << YELLOW("[ WARNING ] Do you really think that's okay? I got bad news for you.\n\n");
+	std::cout << YELLOW("[ WARNING ] This is warning!\n\n");
 }
 
 void Karen::error( void )
 {
-	std::cout << RED("[ ERROR ] Oh, i don't want to explain it, just leave me alone.\n\n");
+	std::cout << RED("[ ERROR ] This is error!\n\n");
 }

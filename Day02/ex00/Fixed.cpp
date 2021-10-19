@@ -10,9 +10,7 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &other)
 {
 	std::cout << "Copy constructor called\n";
-	*this = other; //his->operator=(other);
-	//this->_value = other._value;
-	//*this = other;
+	*this = other;
 }
 
 Fixed::~Fixed()
@@ -38,6 +36,3 @@ int Fixed::getRawBits(void) const
 	std::cout << "getRawBits member function called\n";
 	return (this->_value);
 }
-
-
-

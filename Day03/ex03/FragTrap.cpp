@@ -64,3 +64,8 @@ void FragTrap::highFivesGuys(void)
 	std::cout << "<FragTrap>";
 	std::cout << HI << "High five!\n" ;
 }
+
+int FragTrap::getDamage(void)
+{
+	return(this->_damage);
+}

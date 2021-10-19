@@ -1,16 +1,22 @@
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
+#define SKULL "\U0001F480"
+#define SHIELD "\U0001F6E1"
+#define SWORD "\U0001F5E1"
+#define ELF "\U0001F9DD"
+#define HEAL "\U0001F31F"
 #include <iostream>
 
 class ClapTrap {
-private:
+protected:
 	std::string	_name;
 	int			_hitpoints;
 	int			_energy;
 	int			_damage;
 public:
 	ClapTrap(std::string name);
+	ClapTrap(std::string name, int HP);
 	ClapTrap(void);
 	ClapTrap(const ClapTrap &copy);
 	ClapTrap& operator=(const ClapTrap &copy);

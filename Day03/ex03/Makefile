@@ -1,15 +1,21 @@
-NAME = ClapTrap
+NAME = DiamondTrap
 
 SRC =	main.cpp\
+		FragTrap.cpp\
 		ClapTrap.cpp\
+		ScavTrap.cpp\
+		DiamondTrap.cpp\
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
 CC = clang++
 
 HEADERS = 	ClapTrap.hpp\
+			FragTrap.hpp\
+			ScavTrap.hpp\
+			DiamondTrap.hpp\
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 $(NAME):	$(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)

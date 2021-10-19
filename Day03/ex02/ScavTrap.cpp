@@ -3,6 +3,10 @@
 
 ScavTrap::ScavTrap(std::string name)
 {
+//	if (name != NULL)
+//		this->_name = name;
+//	else
+//		this->_name = "Nameless";
 	this->_name = name;
 	this->_hitpoints = 100;
 	this->_energy = 50;

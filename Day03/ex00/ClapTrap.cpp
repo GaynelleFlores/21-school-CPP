@@ -12,7 +12,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->_hitpoints = 10;
 	this->_energy = 10;
 	this->_damage = 0;
-	std::cout << ELF << this->_name << " was created\n";
+	std::cout << ELF << this->_name << " was created!\n";
 }
 
 ClapTrap::ClapTrap(void)
@@ -22,6 +22,20 @@ ClapTrap::ClapTrap(void)
 	this->_energy = 10;
 	this->_damage = 0;
 	std::cout << ELF << this->_name << " was created!\n";
+}
+
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+	*this = copy;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap &copy)
+{
+	this->_name = copy._name;
+	this->_hitpoints = copy._hitpoints;
+	this->_energy = copy._energy;
+	this->_damage = copy._damage;
+	return (*this);
 }
 
 ClapTrap::~ClapTrap(void)
@@ -34,7 +48,7 @@ void ClapTrap::attack(std::string const &target)
 		this->_energy--;
 	else
 	{
-		std::cout << SWORD << this->_name << " can't attack, she has no energy!\n";
+		std::cout << SWORD << this->_name << " can't attack. Energy isn't enough!\n";
 		return ;
 	}
 	std::cout << SWORD << this->_name << " attacked! ";

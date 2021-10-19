@@ -1,17 +1,20 @@
-NAME = ClapTrap
+NAME = fixedPointNumbers
 
-SRC =	main.cpp\
-		ClapTrap.cpp\
+SRC =		main.cpp\
+			Fixed.cpp\
+			Point.cpp\
+			bsp.cpp\
+
+HEADERS =	Fixed.hpp\
+			Point.hpp\
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
-CC = clang++
-
-HEADERS = 	ClapTrap.hpp\
+CC = clang++ -std=c++98
 
 FLAGS = -Wall -Wextra -Werror
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ) $(HEADERS)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 %.o : %.cpp $(HEADERS)

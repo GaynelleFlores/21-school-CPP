@@ -46,7 +46,7 @@ void Karen::complain(std::string level)
 
 void Karen::debug( void )
 {
-		std::cout << GREEN("[ DEBUG ] This is debug!\n\n");
+	std::cout << GREEN("[ DEBUG ] This is debug!\n\n");
 }
 
 void Karen::info( void )

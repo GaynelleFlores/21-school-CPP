@@ -55,21 +55,21 @@ void Karen::complain(std::string level)
 
 void Karen::debug( void )
 {
-		std::cout << GREEN("debug\n");
+	std::cout << GREEN("debug\n");
 }
 
 
 void Karen::info( void )
 {
-		std::cout << GREEN2("info\n");
+	std::cout << GREEN2("info\n");
 }
 
 void Karen::warning( void )
 {
-		std::cout << YELLOW("warning\n");
+	std::cout << YELLOW("warning\n");
 }
 
 void Karen::error( void )
 {
-		std::cout << RED("error\n");
+	std::cout << RED("error\n");
 }

@@ -20,7 +20,7 @@ HEADERS = 	Bureaucrat.hpp\
 			PresidentialPardonForm.hpp\
 			Intern.hpp\
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 $(NAME):	$(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)

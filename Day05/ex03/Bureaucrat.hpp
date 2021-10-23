@@ -1,5 +1,5 @@
-#ifndef BIREAUCRAT_HPP
-#define BIREAUCRAT_HPP
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
 #include "Form.hpp"
 #include <iostream>

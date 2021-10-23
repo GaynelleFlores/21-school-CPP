@@ -16,8 +16,6 @@ public:
 	PresidentialPardonForm(const PresidentialPardonForm &other);
 	PresidentialPardonForm& operator=(const PresidentialPardonForm &other);
 	virtual ~PresidentialPardonForm();
-
-
 	virtual void action(void) const;
 };
 

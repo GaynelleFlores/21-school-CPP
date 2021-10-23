@@ -15,9 +15,7 @@ public:
 	RobotomyRequestForm(std::string target);
 	RobotomyRequestForm(const RobotomyRequestForm &other);
 	RobotomyRequestForm& operator=(const RobotomyRequestForm &other);
-	~RobotomyRequestForm();
-
-
+	virtual ~RobotomyRequestForm();
 	virtual void action(void) const;
 };
 

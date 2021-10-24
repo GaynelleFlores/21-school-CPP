@@ -60,5 +60,7 @@ int main(void)
 	test = generate();
 	identify(test);
 	identify(*test);
+
+	delete test;
 	return 0;
 }

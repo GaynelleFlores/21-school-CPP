@@ -7,7 +7,6 @@ class Converter
 {
 public:
 	Converter();
-	//Converter(std::string str);
 	Converter(const Converter &other);
 	Converter& operator=(const Converter &other);
 	~Converter();

@@ -52,9 +52,6 @@ public:
 	}
 	~Array()
 	{
-//		if (this->array != nullptr)
-//			for(int i = 0; i < len; i++)
-//				delete &this->array[i];
 		if (this->array != nullptr)
 			delete [] this->array;
 	}

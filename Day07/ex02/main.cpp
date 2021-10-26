@@ -28,5 +28,9 @@ int main ()
 	for(int i = 0; i < LEN; i++)
 		std::cout << copy_a[i] << " ";
 	std::cout << std::endl;
+
+	Array<int> q;
+	Array<int> w;
+	w = q;
 	return 0;
 }

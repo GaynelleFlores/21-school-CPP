@@ -14,7 +14,7 @@ public:
 	}
 	Array(unsigned int n)
 	{
-		T *temp = new T();
+	//	T *temp = new T();
 		this->len = n;
 		if (n == 0)
 		{
@@ -23,11 +23,17 @@ public:
 		}
 		this->array = new T[n];
 		for(int i = 0; i < len; i++)
-			this->array[i] = *temp;
-		delete temp;
+			this->array[i] = T();
+		//delete temp;
 	}
 	Array(const Array &other)
 	{
+		if (other.array == nullptr)
+		{
+			this->array = nullptr;
+			this->len = 0;
+			return ;
+		}
 		this->len = other.len;
 		this->array = new T[this->len];
 		for(int i = 0; i < other.len; i++)
@@ -35,6 +41,12 @@ public:
 	}
 	Array& operator=(const Array &other)
 	{
+		if (other.array == nullptr)
+		{
+			this->array = nullptr;
+			this->len = 0;
+			return(*this);
+		}
 		if (this->array != nullptr)
 			delete [] this->array;
 		this->len = other.len;

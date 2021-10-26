@@ -14,7 +14,6 @@ public:
 	}
 	Array(unsigned int n)
 	{
-	//	T *temp = new T();
 		this->len = n;
 		if (n == 0)
 		{
@@ -24,7 +23,6 @@ public:
 		this->array = new T[n];
 		for(int i = 0; i < len; i++)
 			this->array[i] = T();
-		//delete temp;
 	}
 	Array(const Array &other)
 	{
